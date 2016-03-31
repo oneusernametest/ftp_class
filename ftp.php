@@ -17,10 +17,11 @@ class FTP{
 			$this->server = $server;
 			$this->user = $user;
 			$this->password = $password;
+			$this->connect();
 	}
 
 
-	public  function connect(){
+	private function connect(){
  
     // configurar la conexion basica
     $this->connectionId = ftp_connect($this->server);
